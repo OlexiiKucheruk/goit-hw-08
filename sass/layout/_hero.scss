@@ -1,0 +1,69 @@
+.hero__section {
+  padding: 118px 0;
+  margin: 0 auto;
+  max-width: 1600px;
+
+  @include desktop {
+    padding: 200px 0;
+  }
+}
+
+.hero {
+  background-color: $secondary-background-color;
+  background-image: $hero-gradient, url(../images/hero/hero-bg-mob.jpg);
+  @include retina {
+    background-image: $hero-gradient, url(../images/hero/hero-bg-mob-2x.jpg);
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include tablet {
+    background-image: $hero-gradient, url(../images/hero/hero-bg-tab.jpg);
+    @include retina {
+      background-image: $hero-gradient, url(../images/hero/hero-bg-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: $hero-gradient, url(../images/hero/hero.jpg);
+    @include retina {
+      background-image: $hero-gradient, url(../images/hero/hero-bg-2x.jpg);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @include text(900, 20px, 1.62, 0.06em, $secondary-main-color);
+
+    @include mobile {
+    @include text(900, 26px, 1.62, 0.06em, $secondary-main-color);
+
+    }
+
+    @include tablet {
+      max-width: 360px;
+    }
+
+    @include desktop {
+      max-width: 696px;
+      @include text(900, 44px, 1.36, 0.06em, $secondary-main-color);
+    }
+  }
+
+  &__btn {
+    
+    width: 170px;
+
+    @include mobile {
+    width: 200px;
+    }
+
+    @include desktop {
+      width: 216px;
+    }
+  }
+}
